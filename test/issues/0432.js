@@ -16,3 +16,9 @@ test('should not indent arrays an extra level when disabled', function () {
   var expected = 'array:\n- a\n- b\n';
   assert.strictEqual(output, expected);
 });
+
+test.only('should not indent arrays an extra level when disabled', function () {
+  var output = yaml.safeDump([{"a":"b","items":[{"a":"c","d":"e"}]}], { noArrayIndent: true });
+  var expected = 'a: b\n  items:\n  - a: c\n    d:e';
+  assert.strictEqual(output, expected);
+});

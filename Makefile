@@ -21,7 +21,8 @@ help:
 
 
 lint:
-	./node_modules/.bin/eslint .
+	echo "caling lint"
+	./node_modules/.bin/eslint ./
 
 
 test: lint
