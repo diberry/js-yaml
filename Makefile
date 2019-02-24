@@ -21,7 +21,7 @@ help:
 
 
 lint:
-	./node_modules/.bin/eslint ./
+	./node_modules/.bin/eslint .
 
 
 test: lint
